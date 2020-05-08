@@ -1,0 +1,23 @@
+clc, clear, close all
+
+w = 4; %Valor de W
+wp = 2; %Peso para W
+x = 7; %Valor de X
+xp = 3; %Peso para X
+y = 10; %Valor de Y
+yp = 4; %Peso para Y
+z = 2; %Valor de Z
+zp = 1; %Peso para Z
+a = [w, x, y, z]; %Vetorc
+i = median(a);
+j = (w*wp+x*xp+y*yp+z*zp)/(wp+xp+yp+zp);
+medias = [w/i, x/i, y/i, z/i]
+ponde = [w/j, x/j, y/j, z/j];
+
+f = 1:1:4;
+figure(1)
+hold on
+bar(f,a)
+bar(f,ponde)
+hold off
+
